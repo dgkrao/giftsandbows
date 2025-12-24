@@ -1,0 +1,274 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --lavender: #C8A2C8;
+  --dark: #2e2e2e;
+  --white: #ffffff;
+  --light-bg: #f9f1f9;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* background image OR color (backend will control later) */
+  background-color: var(--white);
+  background-image: url("../assets/backgrounds/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--lavender);
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.logo {
+  height: 45px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  list-style: none;
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* =====================
+   HERO TEXT OVERLAY
+===================== */
+#heroText {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--dark);
+  transform: rotate(0deg);
+  pointer-events: none;
+}
+
+/* =====================
+   PRODUCTS
+===================== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.product-card {
+  background: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.offer {
+  color: purple;
+  font-weight: bold;
+}
+
+/* =====================
+   FORMS & CONTENT BOXES
+===================== */
+.form-container,
+.content-box {
+  max-width: 420px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--lavender);
+}
+
+/* Buttons */
+button {
+  background: var(--lavender);
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* Left aligned buttons in forms */
+.form-container button {
+  align-self: flex-start;
+}
+
+/* =====================
+   ABOUT US – FULL PAGE
+===================== */
+.about-full {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: var(--white);
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.owner-img {
+  width: 140px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+}
+
+/* =====================
+   ADMIN COMMON
+===================== */
+.admin-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+}
+
+.admin-nav {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-nav a {
+  background: var(--lavender);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.admin-nav a:hover {
+  opacity: 0.85;
+}
+
+/* Admin forms */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* =====================
+   CATEGORY LIST
+===================== */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--spacing-md);
+}
+
+.category-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3e6f3;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  border-radius: 8px;
+}
+
+.remove-btn {
+  background: crimson;
+  color: var(--white);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =====================
+   FEEDBACK & ORDERS – CARDS
+===================== */
+.feedback-card,
+.order-card {
+  background: var(--light-bg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.feedback-card h4,
+.order-card h4 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: #6a2c70;
+}

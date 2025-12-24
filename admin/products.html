@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<div class="admin-container">
+  <h2>Add Product</h2>
+
+  <form class="admin-form">
+    <input type="text" placeholder="Product Name" required>
+    <textarea placeholder="Description"></textarea>
+
+    <input type="number" placeholder="Original Price" required>
+    <input type="number" placeholder="Discounted Price" required>
+
+    <input type="text" placeholder="Offer Text (optional)">
+    <select>
+      <option>Select Category</option>
+      <option>Electronics</option>
+      <option>Fashion</option>
+    </select>
+
+    <input type="file">
+    <button type="submit">Add Product</button>
+  </form>
+</div>
+
+</body>
+</html>
