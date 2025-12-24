@@ -9,7 +9,6 @@
 <body onload="loadNavbar()">
 
 <div id="navbar"></div>
-
 <div class="form-container">
   <h2>Create Account</h2>
 
@@ -17,10 +16,19 @@
   <input type="email" placeholder="Email" required>
   <input type="password" placeholder="Password" required>
 
-  <button>Register</button>
+  <button type="button">Send OTP</button>
 
-  <p>Already have an account? <a href="login.html">Login</a></p>
+  <input type="text" placeholder="Enter OTP">
+
+  <button type="button">Verify OTP</button>
+
+  <button>Create Account</button>
+
+  <p>Already have an account?
+    <a href="login.html">Login</a>
+  </p>
 </div>
+
 
 <script src="js/config.js"></script>
 <script src="js/navbar.js"></script>
